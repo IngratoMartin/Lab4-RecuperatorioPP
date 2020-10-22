@@ -1,0 +1,36 @@
+<mat-spinner *ngIf="showSpinner"></mat-spinner>
+<div *ngIf=!showSpinner>
+<app-title title="Detalles"></app-title>
+<br>
+<span>
+    Nombre: <app-label [label]="pokemon.name"></app-label>
+</span>
+<br>
+<span>
+    Habilidades: 
+</span>
+    <div *ngFor="let skill of pokemon.abilities">
+<span>
+    <app-label [label]="skill.ability.name"></app-label>
+</span>
+</div>
+<span>
+    ID: <app-label [label]="pokemon.id"></app-label>
+</span>
+<br>
+<span>
+    Experiencia base: <app-label [label]="pokemon.base_experience"></app-label>
+</span>
+<br>
+<span>
+    Altura: <app-label [label]="pokemon.height"></app-label>
+</span>
+<br>
+<span>
+    Anchura: <app-label [label]="pokemon.weight"></app-label>
+</span>
+<br>
+<img [src]=pokemon.sprites.back_default>
+<img [src]=pokemon.sprites.front_default>
+</div>
+

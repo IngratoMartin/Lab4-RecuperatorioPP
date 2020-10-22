@@ -1,0 +1,7 @@
+<app-title title="Listado de pokemones"></app-title>
+<mat-spinner *ngIf="showSpinner"></mat-spinner>
+<div *ngIf=!showSpinner>
+    <div *ngFor="let poke of results">
+        <app-label [label]="poke.name"></app-label> -- <app-button label="Detalles" (click)=Detalles(poke.url)></app-button> -- <app-button label="Movimientos" (click)=Movimientos(poke.url)></app-button>
+    </div> 
+</div>

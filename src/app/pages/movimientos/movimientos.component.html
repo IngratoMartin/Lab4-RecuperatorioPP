@@ -1,0 +1,16 @@
+<mat-spinner *ngIf="showSpinner"></mat-spinner>
+<div *ngIf=!showSpinner>
+<app-title title="Movimientos"></app-title>
+<br>
+<span>
+    Nombre: <app-label [label]="pokemon.name"></app-label>
+</span>
+<br>
+<div *ngFor="let move of pokemon.moves">
+    <span>
+        <app-label [label]="move.move.name"></app-label>
+    </span>
+</div>
+</div>
+
+
